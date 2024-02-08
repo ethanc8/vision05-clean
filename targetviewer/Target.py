@@ -11,7 +11,10 @@ class Target():
         self.name = name
         self.username = username
         self.number = number
-        self.firstVictimDay = datetime.date(2022, 2, 10+number)
+        try:
+            self.firstVictimDay = datetime.date(2024, 2, 10+number)
+        except:
+            self.firstVictimDay = datetime.date(2024, 12, 31)
     
     def isVictim(self) -> bool:
         return datetime.date.today() <= self.firstVictimDay
@@ -31,7 +34,7 @@ class TargetPage(LXSettings.DirectoryPage):
                 label_str = "Take headshot", 
                 description_str = 
 """Take a headshot of this person.""",
-                onclick_command = ['python3', str(pathlib.Path(__file__).parent.resolve() / ".." / "playgrounds" / "headshot.py"), target.username],
+                onclick_command = ['python3', str(pathlib.Path(__file__).parent.resolve() / ".." / "playgrounds" / "headshot.py"), target.username, target.name],
             )
         ]
         self.page_path_str = f"Home -> {target.name}"
