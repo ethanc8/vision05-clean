@@ -9,7 +9,7 @@ import LXSettings
 
 class __LXSettingsMainWindow(Gtk.Window):
     def __init__(self):
-        super().__init__(title="SCAI Targets")
+        super().__init__(title="ECAI Targets")
         self.set_border_width(10)
         self.set_default_size(500, 500)
         

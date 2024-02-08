@@ -13,4 +13,4 @@ while cap.isOpened():
     if key == 27: # ESC key
         break
 
-    cv2.imshow("SCAI Target Detector", image)
+    cv2.imshow("ECAI Target Detector", image)
