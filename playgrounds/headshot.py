@@ -36,7 +36,7 @@ while cap.isOpened():
         print(f"{imagePath} written!")
         imageCounter += 1
 
-    cv2.imshow(f"Headshot for {fullname} - press space to take picture", frame)
+    cv2.imshow(f"Headshot for {fullname} - SPACE take picture - ESC exit", frame)
 
 with open(imageCountFilePath, "w") as imageCountFile:
     imageCountFile.write(str(imageCounter) + "\n")
