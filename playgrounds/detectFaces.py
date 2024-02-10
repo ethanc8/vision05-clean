@@ -11,7 +11,7 @@ import pickle
 import time
 import cv2
 import pathlib
-from targetNames import *
+from targets import *
 
 #Initialize 'currentname' to trigger only when a new person is identified.
 currentname = "unknown"
