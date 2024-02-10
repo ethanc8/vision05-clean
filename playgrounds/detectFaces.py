@@ -17,7 +17,7 @@ currentname = "unknown"
 #Determine faces from encodings.pickle file model created from train_model.py
 encodingsP = pathlib.Path(__file__).parent.resolve() / "dataset" / "encodings.pickle"
 #use this xml file
-cascade = pathlib.Path(__file__).parent.resolve() / "haarcascade_frontalface_default.xml"
+cascade = str(pathlib.Path(__file__).parent.resolve() / "haarcascade_frontalface_default.xml")
 
 def send_message(name):
 	# TODO: Send message to the GUI
