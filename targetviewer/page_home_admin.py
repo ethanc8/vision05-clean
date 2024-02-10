@@ -22,7 +22,7 @@ class __page_home_admin(LXSettings.DirectoryPage):
         ]
         self.page_path_str = "Home -> Administrative Settings"
         self.page_name = "Administrative Settings"
-        self.icon_name = "settings-configure"
+        self.icon_name = "preferences-system"
         
         super().init_end()
 
