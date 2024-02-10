@@ -11,6 +11,7 @@ import pickle
 import time
 import cv2
 import pathlib
+from targetNames import *
 
 #Initialize 'currentname' to trigger only when a new person is identified.
 currentname = "unknown"
@@ -113,15 +114,15 @@ while True:
 		cv2.rectangle(frame, (left, top), (right, bottom),
 			(0, 255, 225), 2)
 		y = top - 15 if top - 15 > 15 else top + 15
-		cv2.putText(frame, name, (left, y), cv2.FONT_HERSHEY_SIMPLEX,
+		cv2.putText(frame, f"({numberForTarget[name]}) {nameForTarget[name]}", (left, y), cv2.FONT_HERSHEY_SIMPLEX,
 			.8, (0, 255, 255), 2)
 
 	# display the image to our screen
 	cv2.imshow("Facial Recognition is Running", frame)
 	key = cv2.waitKey(1) & 0xFF
 
-	# if the `q` key was pressed, break from the loop
-	if key == ord("q"):
+	# if the ESC key was pressed, break from the loop
+	if key == 27:
 		break
 
 	# update the FPS counter
