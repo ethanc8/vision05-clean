@@ -10,7 +10,13 @@ class __page_home(LXSettings.DirectoryPage):
         super().init_begin()
         
         self.items = [
-            *target_buttons
+            *target_buttons,
+            LXSettings.DirectoryButton(
+                icon_name = "settings-configure",
+                label_str = "Administrative Settings",
+                description_str = "Internal use only.",
+                onclick_page_str = "Home -> Administrative Settings",
+            )
         ]
         self.page_path_str = "Home"
         self.page_name = "Home"

@@ -22,7 +22,11 @@ class Target():
 class TargetDirectoryButton(LXSettings.DirectoryButton):
     def __init__(self, target: Target):
         self.target = target
-        super().__init__(label_str=target.name, onclick_page_str=f"Home -> {target.name}")
+        super().__init__(
+            icon_name = "user",
+            label_str = target.name, 
+            description_str = target.username,
+            onclick_page_str = f"Home -> {target.name}")
 
 class TargetPage(LXSettings.DirectoryPage):
     def __init__(self, target: Target):
@@ -39,7 +43,7 @@ class TargetPage(LXSettings.DirectoryPage):
         ]
         self.page_path_str = f"Home -> {target.name}"
         self.page_name = target.name
-        self.icon_name = "preferences-desktop-theme"
+        self.icon_name = "user"
         
         super().init_end()
         

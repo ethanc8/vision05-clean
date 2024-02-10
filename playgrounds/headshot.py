@@ -8,6 +8,8 @@ import os
 
 # print(cv2.__file__)
 
+# Similar to https://github.com/carolinedunn/facial_recognition/blob/main/headshots.py
+
 cap = cv2.VideoCapture(0)
 
 username = sys.argv[1]

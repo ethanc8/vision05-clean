@@ -1,5 +1,7 @@
 import page_home
 
+import page_home_admin
+
 # import page_home_appearance
 
 # import page_home_devices

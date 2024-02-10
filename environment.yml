@@ -10,3 +10,4 @@ dependencies:
   - face-recognition=1.3.0
   - pygobject=3.46.0
   - gtk3=3.24.41
+  - imutils=0.5.4
