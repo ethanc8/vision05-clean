@@ -1,6 +1,8 @@
 # vision05
 
-## Dependencies installation (on your own computer)
+## Dependencies installation
+
+### Install conda/miniforge
 
 First, please have Conda installed on your computer. If it's not installed, please install [Miniforge3](https://conda-forge.org/miniforge/), which includes Conda and a conda-forge based Python environment. You can install Miniforge3 using the following command:
 
@@ -17,6 +19,8 @@ Close and reopen your shell, and run:
 conda config --set auto_activate_base false
 ```
 
+## Install dependencies (x86_64)
+
 Now, you can use Conda to install the dependencies.
 
 ```bash
@@ -28,4 +32,20 @@ If you modify `environment.yml`, please run
 
 ```bash
 conda env update -f environment.yml
+```
+
+## Install dependencies (Raspberry Pi)
+
+Now, you can use Conda to install the dependencies.
+
+```bash
+sudo apt install yad
+conda env create -f environment-rpi.yml
+conda activate vision05
+```
+
+If you modify `environment.yml`, please run
+
+```bash
+conda env update -f environment-rpi.yml
 ```
