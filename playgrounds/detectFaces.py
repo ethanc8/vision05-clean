@@ -10,17 +10,18 @@ import imutils
 import pickle
 import time
 import cv2
+import pathlib
 
 #Initialize 'currentname' to trigger only when a new person is identified.
 currentname = "unknown"
 #Determine faces from encodings.pickle file model created from train_model.py
-encodingsP = "encodings.pickle"
+encodingsP = pathlib.Path(__file__).parent.resolve() / "dataset" / "encodings.pickle"
 #use this xml file
 cascade = "haarcascade_frontalface_default.xml"
 
 def send_message(name):
 	# TODO: Send message to the GUI
-    return 200
+    return
 
 # load the known faces and embeddings along with OpenCV's Haar
 # cascade for face detection
@@ -95,13 +96,13 @@ while True:
 				currentname = name
 				print(currentname)
 				#Take a picture to send in the email
-				img_name = "image.jpg"
-				cv2.imwrite(img_name, frame)
-				print('Taking a picture.')
+				# img_name = "image.jpg"
+				# cv2.imwrite(img_name, frame)
+				# print('Taking a picture.')
 				
 				#Now send me an email to let me know who is at the door
 				request = send_message(name)
-				print ('Status Code: '+format(request.status_code)) #200 status code means email sent successfully
+				# print ('Status Code: '+format(request.status_code)) #200 status code means email sent successfully
 				
 		# update the list of names
 		names.append(name)

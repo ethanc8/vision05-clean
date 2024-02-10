@@ -18,6 +18,13 @@ class __page_home_admin(LXSettings.DirectoryPage):
                 description_str = 
 """Calculate embeddings of the training data and write them to encodings.pickle.""",
                 onclick_command = ['python3', str(pathlib.Path(__file__).parent.resolve() / ".." / "playgrounds" / "pickleEmbeddings.py")],
+            ),
+            LXSettings.DirectoryButton(
+                icon_name = "camera-web",
+                label_str = "Begin face recognition", 
+                description_str = 
+"""Open the face recognition program.""",
+                onclick_command = ['python3', str(pathlib.Path(__file__).parent.resolve() / ".." / "playgrounds" / "detectFaces.py")],
             )
         ]
         self.page_path_str = "Home -> Administrative Settings"
