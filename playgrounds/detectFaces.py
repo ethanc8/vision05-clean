@@ -44,7 +44,7 @@ while True:
 	# grab the frame from the threaded video stream and resize it
 	# to 500px (to speedup processing)
 	frame = vs.read()
-	frame = imutils.resize(frame, width=500)
+	# frame = imutils.resize(frame, width=1000)
 	
 	# convert the input frame from (1) BGR to grayscale (for face
 	# detection) and (2) from BGR to RGB (for face recognition)
@@ -71,7 +71,7 @@ while True:
 		# attempt to match each face in the input image to our known
 		# encodings
 		matches = face_recognition.compare_faces(data["encodings"],
-			encoding, tolerance=0.35)
+			encoding, tolerance=0.4)
 		distances = face_recognition.face_distance(data["encodings"],
 			encoding)
 		name = "Unknown"
@@ -126,7 +126,7 @@ while True:
 			(0, 255, 225), 2)
 		y = top - 15 if top - 15 > 15 else top + 15
 		# f"({numberForTarget[name]}) {nameForTarget[name]}",
-		if confidence > 0.65:
+		if confidence > 0:
 			text = f"{confidence * 100 :.2f}% {nameForTarget[name]}"
 		else:
 			text = "Unknown"
