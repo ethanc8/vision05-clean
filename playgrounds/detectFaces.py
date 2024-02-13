@@ -123,7 +123,7 @@ while True:
 	for ((top, right, bottom, left), name, confidence) in zip(boxes, names, confidences):
 		# draw the predicted face name on the image - color is in BGR
 		cv2.rectangle(frame, (left, top), (right, bottom),
-			(0, 255, 225), 2)
+			(112, 37, 87), 2)
 		y = top - 15 if top - 15 > 15 else top + 15
 		# f"({numberForTarget[name]}) {nameForTarget[name]}",
 		if confidence > 0:
@@ -131,7 +131,7 @@ while True:
 		else:
 			text = "Unknown"
 		cv2.putText(frame, text, (left, y), cv2.FONT_HERSHEY_SIMPLEX,
-			0.8, (0, 255, 255), 2)
+			0.8, (255, 255, 255), 2)
 
 	# display the image to our screen
 	cv2.imshow("Facial Recognition is Running", frame)
