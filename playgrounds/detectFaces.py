@@ -165,7 +165,10 @@ while True:
            thickness=2)
 
     # display the image to our screen
-    cv2.imshow("Facial Recognition is Running", frame)
+    window = "ECAI Target Detector"
+    cv2.namedWindow(window, cv2.WND_PROP_FULLSCREEN)
+    cv2.setWindowProperty(window, cv2.WND_PROP_FULLSCREEN,cv2.WINDOW_FULLSCREEN)
+    cv2.imshow(window, frame)
     key = cv2.waitKey(1) & 0xFF
 
     # if the ESC key was pressed, break from the loop
