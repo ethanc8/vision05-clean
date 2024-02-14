@@ -12,7 +12,7 @@ class __page_home(LXSettings.DirectoryPage):
         self.items = [
             *target_buttons,
             LXSettings.DirectoryButton(
-                icon_name = "list-add-user",
+                icon_name = "list-add",
                 label_str = "New Person",
                 description_str = "Add a new person to the dataset.",
                 onclick_page_str = "Home -> New Person",

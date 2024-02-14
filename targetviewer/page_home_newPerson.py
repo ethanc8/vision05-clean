@@ -37,7 +37,7 @@ class __page_home_newPerson(LXSettings.Page):
 
         self.page_path_str = "Home -> New Person"
         self.page_name = "New Person"
-        self.icon_name = "list-add-user"
+        self.icon_name = "list-add"
         
         super().init_end()
         self.top_widget.show()
