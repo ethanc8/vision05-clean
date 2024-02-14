@@ -1,6 +1,7 @@
 import page_home
 
 import page_home_admin
+import page_home_newPerson
 
 # import page_home_appearance
 

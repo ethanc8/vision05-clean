@@ -8,15 +8,23 @@ from targets import *
 class __page_home(LXSettings.DirectoryPage):
     def __init__(self):
         super().init_begin()
-        
+
         self.items = [
             *target_buttons,
+            LXSettings.DirectoryButton(
+                icon_name = "list-add-user",
+                label_str = "New Person",
+                description_str = "Add a new person to the dataset.",
+                onclick_page_str = "Home -> New Person",
+                # onclick = newPerson,
+            ),
             LXSettings.DirectoryButton(
                 icon_name = "preferences-system",
                 label_str = "Administrative Settings",
                 description_str = "Internal use only.",
                 onclick_page_str = "Home -> Administrative Settings",
-            )
+            ),
+            
         ]
         self.page_path_str = "Home"
         self.page_name = "Home"
