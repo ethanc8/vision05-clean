@@ -11,6 +11,7 @@ import pickle
 import time
 import cv2
 import pathlib
+import datetime
 from targets import *
 
 #Initialize 'currentname' to trigger only when a new person is identified.
@@ -130,7 +131,7 @@ while True:
             #If someone in your dataset is identified, print their name on the screen
             if currentname != name:
                 currentname = name
-                print(currentname)
+                print(f"[DETECTED PERSON] {datetime.datetime.now()} - {nameForTarget[name]}")
                 #Take a picture to send in the email
                 # img_name = "image.jpg"
                 # cv2.imwrite(img_name, frame)
