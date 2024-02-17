@@ -14,13 +14,15 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-As a special exception, you may combine this work with any work licensed
-under the Apple Public Source License version 2, and may ignore any section
-of the GPLv3 that prohibits you from doing so.
+As a special exception, you may combine this work with any work 
+licensed under the Apple Public Source License version 2 or GNU 
+General Public License version 2 if the reason why said work is 
+licensed under APSLv2  or GPLv2 is out of your control, and may 
+ignore any section of the GPLv3 that prohibits you from doing so.
 
-As a special exception, if you provide Corresponding Source to the general public, 
-you may choose not to provide Installation Information to those to which you
-distribute this software to.
+As a special exception, if you provide Corresponding Source to the 
+general public, you may choose not to provide Installation Information 
+to those to whom you distribute this software to.
 
 # GNU GENERAL PUBLIC LICENSE
 
